@@ -1,8 +1,8 @@
 # 精品商店 / Premium Shop Demo
 
-Proyek ini adalah halaman demonstrasi toko sederhana berbasis satu berkas HTML. Antarmukanya menggunakan bahasa Mandarin Tradisional dan memperlihatkan daftar produk, keranjang belanja samping, pengaturan kuantitas, serta alur checkout tiruan.
+Proyek ini adalah halaman demonstrasi toko sederhana. Antarmukanya menggunakan bahasa Mandarin Tradisional dan memperlihatkan daftar produk, keranjang belanja samping, pengaturan kuantitas, serta alur checkout tiruan.
 
-Seluruh implementasi berada di [src/index.html](src/index.html). Halaman menggunakan Vue 3.5.43 dari CDN sehingga tidak membutuhkan proses build atau package manager, tetapi membutuhkan koneksi internet saat pertama kali memuat framework. Tidak ada backend maupun API eksternal.
+Template halaman berada di [src/index.html](src/index.html), CSS di [assets/css/style.css](assets/css/style.css), dan logika Vue di [assets/js/app.js](assets/js/app.js). Halaman menggunakan Vue 3.5.43 dari CDN sehingga tidak membutuhkan proses build atau package manager, tetapi membutuhkan koneksi internet saat pertama kali memuat framework. Tidak ada backend maupun API eksternal.
 
 ## Fitur saat ini
 
@@ -29,8 +29,13 @@ Kemudian buka `http://localhost:8000/src/`.
 
 ```text
 .
+├── assets/
+│   ├── css/
+│   │   └── style.css  # Gaya halaman
+│   └── js/
+│       └── app.js     # State dan logika Vue
 ├── src/
-│   └── index.html  # Template Vue, CSS, data contoh, dan logika aplikasi
+│   └── index.html     # Template Vue dan referensi aset
 ├── README.md       # Ringkasan proyek dan cara menjalankan
 ├── TECH.md         # Arsitektur, perilaku teknis, dan batasan
 └── AI.md           # Pedoman penggunaan AI untuk pengembangan lanjutan

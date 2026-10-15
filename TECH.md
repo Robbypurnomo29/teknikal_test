@@ -2,17 +2,17 @@
 
 ## Ruang lingkup
 
-`src/index.html` adalah aplikasi satu halaman (single-page) statis. HTML, CSS, dan logika aplikasi berada dalam satu berkas; Vue 3 dimuat melalui CDN dan berjalan seluruhnya di peramban. Tidak ada package manager, server aplikasi, database, atau test suite.
+`src/index.html` adalah aplikasi satu halaman (single-page) statis. Template, CSS, dan logika aplikasi berada dalam berkas terpisah; Vue 3 dimuat melalui CDN dan berjalan seluruhnya di peramban. Tidak ada package manager, server aplikasi, database, atau test suite.
 
 ## Arsitektur saat ini
 
 | Lapisan | Implementasi | Tanggung jawab |
 | --- | --- | --- |
-| Tampilan | Template HTML dengan directive Vue | Header, pencarian, area produk, indikator loading, panel keranjang, toast, dan dialog |
-| Gaya | CSS inline dalam tag `<style>` | Grid produk, kartu, panel samping, state terbuka, toast, dialog, dan breakpoint sederhana |
+| Tampilan | `src/index.html` dengan directive Vue | Header, pencarian, area produk, indikator loading, panel keranjang, toast, dan dialog |
+| Gaya | `assets/css/style.css` | Grid produk, kartu, panel samping, state terbuka, toast, dialog, dan breakpoint sederhana |
 | Framework | Vue 3 global build dari CDN | Binding reaktif, computed value, rendering daftar, dan event handler |
-| State | `data()` pada satu Vue app | Menyimpan katalog, keranjang, pencarian, dialog, toast, serta state sidebar |
-| Interaksi | `methods` dan event directive Vue | Memuat produk, mengubah keranjang, membuka dialog, dan checkout |
+| State | `data()` pada satu Vue app di `assets/js/app.js` | Menyimpan katalog, keranjang, pencarian, dialog, toast, serta state sidebar |
+| Interaksi | `methods` di `assets/js/app.js` dan event directive Vue | Memuat produk, mengubah keranjang, membuka dialog, dan checkout |
 | Data/API | Array lokal dan `setTimeout` | Menirukan respons katalog dan proses checkout |
 
 ## Alur aplikasi

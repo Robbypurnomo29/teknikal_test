@@ -5,13 +5,13 @@ Dokumen ini memberikan konteks bagi asisten AI atau kontributor yang akan mengub
 ## Konteks proyek
 
 - Bahasa antarmuka sumber adalah Mandarin Tradisional (`lang="zh-TW"`), sedangkan dokumentasi ini ditulis dalam Bahasa Indonesia.
-- Aplikasi hanya terdiri dari `src/index.html`; Vue 3 global build dimuat dari CDN untuk state dan rendering reaktif.
+- Template aplikasi berada di `src/index.html`, gaya di `assets/css/style.css`, dan logika Vue di `assets/js/app.js`. Vue 3 global build dimuat dari CDN untuk state dan rendering reaktif.
 - Tidak ada backend, aset gambar lokal, atau konfigurasi build yang boleh diasumsikan tersedia.
 - Perilaku data saat ini merupakan simulasi dan harus dipertahankan bila tugas tidak secara eksplisit meminta integrasi API nyata.
 
 ## Prinsip perubahan
 
-1. Baca seluruh `src/index.html` sebelum mengubahnya; CSS, markup, dan logika JavaScript saling berada dalam satu berkas.
+1. Baca `src/index.html`, `assets/css/style.css`, dan `assets/js/app.js` sebelum mengubah alur tampilan atau interaksi.
 2. Gunakan state Vue (`data`, `computed`, dan `methods`) untuk perilaku baru; jangan kembali ke manipulasi DOM manual atau event inline.
 3. Pertahankan fungsi inti: memuat dan mencari produk, menambah/menghapus item dengan konfirmasi, mengubah kuantitas, memperbarui total, membuka/menutup keranjang, dan checkout tiruan.
 4. Bila menambahkan data dari luar kode, gunakan interpolasi atau binding Vue; hindari `v-html` kecuali kontennya telah disanitasi dengan tepat.
